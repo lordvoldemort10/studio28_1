@@ -1,0 +1,169 @@
+/* Algemene Stijlen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f4f9;
+    background: radial-gradient(circle at center, #f4f4f9, #e0e0e0);
+    margin-left: 220px; /* Ruimte voor de zijbalk */
+}
+
+/* Kleurenpalet en Stijl op basis van de afbeelding */
+:root {
+    --primary-blue: #2a73cc;
+    --secondary-green: #38a66a;
+    --highlight-yellow: #f4d35e;
+    --accent-red: #f03a47;
+    --deep-purple: #6a4c93;
+    --background-light: #f4f4f9;
+    --background-dark: #333;
+}
+
+/* Header en Footer */
+.header, .footer {
+    background-color: var(--background-dark);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Zijbalk Navigatie */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background-color: var(--background-dark);
+    padding-top: 20px;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar .nav-link {
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    display: block;
+    text-decoration: none;
+    border-left: 5px solid transparent;
+    transition: background-color 0.3s ease, border-left-color 0.3s ease;
+}
+
+.sidebar .nav-link:hover {
+    background-color: var(--highlight-yellow);
+    color: var(--background-dark);
+    border-left-color: var(--accent-red);
+}
+
+/* Carousel Sectie */
+.carousel-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--primary-blue);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.scrolling-gallery .carousel-inner img {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: var(--deep-purple);
+    border-radius: 50%;
+}
+
+.carousel-control-prev-icon:hover, .carousel-control-next-icon:hover {
+    background-color: var(--highlight-yellow);
+}
+
+/* Abstracte Vormen voor Achtergrondeffecten */
+.content::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background-color: var(--secondary-green);
+    border-radius: 50%;
+    opacity: 0.2;
+    z-index: -1;
+    transform: rotate(45deg);
+}
+
+.content::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+    background-color: var(--accent-red);
+    border-radius: 50%;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+/* Footer Iconen */
+.social-icons a {
+    font-size: 1.5em;
+    color: white;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--highlight-yellow);
+}
+
+/* Contactformulier Stijl */
+.contact-section .form-group label {
+    font-weight: bold;
+    color: var(--primary-blue);
+}
+
+.contact-section .form-group input, .contact-section .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--secondary-green);
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section .form-group input:focus, .contact-section .form-group textarea:focus {
+    border-color: var(--deep-purple);
+    outline: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-red);
+    color: white;
+}
+
+/* Hover Effecten voor Carousel Afbeeldingen */
+.carousel-inner img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
